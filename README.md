@@ -38,8 +38,8 @@ The configuration details of each machine may be found below.
 | Jump Box | Gateway  |137.135.120.82 | Linux            |
 | Web 1    |          | 10.0.0.8      | Linux            |
 | Web 2    |          | 10.0.0.7      | Linux            |
-| Elk      |          | 10.1.0.4      | Linux            |
-                        40.122.120.185
+| Elk Pvt. |          | 10.1.0.4      | Linux            |
+| Elk Pub. |          | 40.122.120.185| Linux                 |
 
 ### Access Policies
 
@@ -56,9 +56,9 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 |   97.92.33.60        |
-| Web1     | No                  |                      |
-| Web2     | No                  |                      | 
-  Elk      | No                  |                      |
+| Web1     | No                  |   137.135.120.82     |
+| Web2     | No                  |   137.135.120.82     | 
+| Elk      | No                  |   137.135.120.82     |
 
 ### Elk Configuration
 
