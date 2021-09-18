@@ -95,3 +95,5 @@ SSH into the control node and follow the steps below:
 - Update the ansible config file to include the ip addresses of the desired machines
 - Run the playbook, and navigate to http://40.122.120.185:5601/app/kibana#/home to check that the installation worked as expected.
 
+###The following script can be run in BASH to gather critical system information.
+![](Scripts\sys_info.sh)
