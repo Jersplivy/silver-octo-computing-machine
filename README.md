@@ -104,4 +104,4 @@ SSH into the control node and follow the steps below:
 
 ### The following script can be run in BASH to gather critical system information. These files are stored in the Linux directory above
 
--sys_info.sh
+sys_info.sh
