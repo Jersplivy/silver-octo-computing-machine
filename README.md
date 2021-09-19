@@ -3,8 +3,8 @@
 The files in this repository were used to configure the network depicted below.
 ![](Images/network_diagram.PNG)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat.
-https://github.com/Jersplivy/silver-octo-computing-machine/blob/2b14cbc9d66751bb8b26a98c2a1b7c7bf1cad2e1/Ansible/metricbeat_playbook.yml
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat. These code snippets are stored in the Ansible directory above.
+  -metricbeat-playbook.yml
   -pentest.yml
   -filebeat-playbook.yml
   -install-elk.yml
@@ -94,5 +94,5 @@ SSH into the control node and follow the steps below:
 - Update the ansible config file to include the ip addresses of the desired machines
 - Run the playbook, and navigate to http://40.122.120.185:5601/app/kibana#/home to check that the installation worked as expected.
 
-###The following script can be run in BASH to gather critical system information.
-![](Scripts\sys_info.sh)
+###The following script can be run in BASH to gather critical system information. These files are stored in the Linux directory above.
+-sys_info.sh
