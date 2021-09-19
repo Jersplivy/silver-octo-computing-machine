@@ -10,13 +10,13 @@ These files have been tested and used to generate a live ELK deployment on Azure
   -install-elk.yml
 
 This document contains the following details:
+
 - Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
-
 
 ### Description of the Topology
 
@@ -26,11 +26,11 @@ Load balancing ensures that the application will be highly available, in additio
 -Load balancers touch on the availability aspect of the cybersecurity triad. A jump box gives the ability to manage multiple systems form one location, increasing security.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system logs.
+
 - Filebeat watches for any changes made to a system, gives an administrator the ability to easily compile logs for analysis.
 - Metricbeat allows for easy compilation and analysis of metrics on a system. Cpu usage, disk usage and so on.
 
 The configuration details of each machine may be found below.
-
 
 | Name     | Function | IP Address    | Operating System |
 |----------|----------|---------------|------------------|
@@ -42,13 +42,13 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
 - 97.92.33.60
 
 Machines within the network can only be accessed by fervent_cohen docker container.
-
 
 A summary of the access policies in place can be found in the table below.
 
@@ -56,15 +56,17 @@ A summary of the access policies in place can be found in the table below.
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 |   97.92.33.60        |
 | Web1     | No                  |   137.135.120.82     |
-| Web2     | No                  |   137.135.120.82     | 
+| Web2     | No                  |   137.135.120.82     |
 | Elk      | No                  |   137.135.120.82     |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+
 - All machines can be rapidly configured in the exact same way.
 
 The playbook implements the following tasks:
+
 - Download and install docker
 - Download and install elk
 - Configure and start the container and server.
@@ -73,26 +75,31 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ![](Images/docker_ps_output.png)
 
-
 ### Target Machines & Beats
+
 This ELK server is configured to monitor the following machines:
 -10.0.0.7
 -10.0.0.8
 
 We have installed the following Beats on these machines:
+
 - filebeat
 -metricbeat
 
 These Beats allow us to collect the following information from each machine:
+
 - Filebeat will collect change logs of files on the system while metric beat gathers system metrics.
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
+
 - Copy the config file to ansible container.
 - Update the ansible config file to include the ip addresses of the desired machines
-- Run the playbook, and navigate to http://40.122.120.185:5601/app/kibana#/home to check that the installation worked as expected.
+- Run the playbook, and navigate to <http://40.122.120.185:5601/app/kibana#/home> to check that the installation worked as expected.
 
-###The following script can be run in BASH to gather critical system information. These files are stored in the Linux directory above.
+### The following script can be run in BASH to gather critical system information. These files are stored in the Linux directory above
+
 -sys_info.sh
