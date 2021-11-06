@@ -48,7 +48,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-- <Home ip address>
+- {home ip address}
 
 Machines within the network can only be accessed by fervent_cohen docker container.
 
@@ -56,7 +56,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 |   <Home ip address>  |
+| Jump Box | Yes                 |   {home ip address}  |
 | Web1     | No                  |   137.135.120.82     |
 | Web2     | No                  |   137.135.120.82     |
 | Elk      | No                  |   137.135.120.82     |
